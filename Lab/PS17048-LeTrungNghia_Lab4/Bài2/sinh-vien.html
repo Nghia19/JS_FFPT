@@ -1,0 +1,19 @@
+<body>
+    <script type="text/javascript">
+        let sv = new Object()
+        sv.hoTen = prompt('Nhập họ và tên')
+        sv.diem = prompt('Nhập điểm')
+        sv.hienThi = function () {
+            if (this.diem >= 5) {
+                this.hocLuc = 'Đậu';
+            } else {
+                this.hocLuc = 'Rớt';
+            }
+            document.write(`<h3>Họ và tên: ${this.hoTen}</h3>`);
+            document.write(`<h3>Điểm TB: ${this.diem}</h3>`);
+            document.write(`<h3>Học lực: ${this.hocLuc}</h3>`);
+        }
+
+    </script>
+    <button onclick="sv.hienThi()">Hiển thị</button>
+</body>

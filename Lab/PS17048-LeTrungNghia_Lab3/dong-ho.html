@@ -1,0 +1,39 @@
+<head>
+    <script>
+        window.setTimeout("showTime()", 1000);
+        function getTime() {
+            var time = new Date();
+            var hr = time.getHours();
+            var min = time.getMinutes();
+            var sec = time.getSeconds();
+            hr = ((hr < 10) ? "0" : "") + hr;
+            min = ((min < 10) ? "0" : "") + min;
+            sec = ((sec < 10) ? "0" : "") + sec;
+            if (hr < 12) {
+                return hr + ":" + min + ":" + sec + 'AM'
+            } else {
+                return hr + ":" + min + ":" + sec + 'AM'
+            }
+        }
+        function showTime() {
+            var vnclock = document.getElementById("vnclock");
+            if (vnclock != null)
+                vnclock.innerHTML = getVNTime();
+            setTimeout("showTime()", 1000)
+        }
+    </script>
+    <!-- <script type="text/javascript">
+        function getTime() {
+            let now = new Date()
+            let hr = now.getHours()
+            let min = now.getMinutes()
+            let sec = now.getSeconds()
+            hr = ((hr < 10) ? "0" : "") + hr;
+            min = ((min < 10) ? "0" : "") + min;
+            sec = ((sec < 10) ? "0" : "") + sec;
+            let timer = hr + ':' + min + ':' + sec
+            document.write(timer)
+        }
+        setInterval(getTime(), 1000)
+    </script> -->
+</head>

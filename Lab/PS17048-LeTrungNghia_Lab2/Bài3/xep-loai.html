@@ -1,0 +1,21 @@
+<pre>
+<head>
+     <script type="text/javascript">
+        function screen(fullname, points) {
+            document.writeln('Họ và tên:' + fullname.toUpperCase())
+            if (points < 5) {
+                document.writeln('Xếp loại: Xuất rớt')
+            } else {
+                document.writeln('Xếp loại: Xuất đậu')
+            }
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        let fullname = prompt('Nhập họ và tên:')
+        let points = prompt('Nhập số điểm:')
+        screen(fullname, points)
+    </script>
+</body>
+</pre>
