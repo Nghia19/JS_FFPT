@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bài 3</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
-        let a = 2
-        if (a % 2 === 0) {
-            alert(a + ' là số chẵn')
-        } else {
-            alert(a + ' là số lẻ')
+      //1.khai báo biến
+      var a;
+      do {
+        a = prompt("Nhập số a : ");
+        if (isNaN(a) == true || a == "") {
+          alert("Đây không phải là số , mời bạn nhập lại ");
         }
+      } while (isNaN(a) == true || a == "");
+      //2.Kiểm tra chẳn lẻ và in ra màn hình
+      if (a % 2 == 0) {
+        //nếu a chia cho 2 mà dư 0 là số chẳn
+        alert(a + " là số chẵn");
+      } else {
+        alert(a + " là số lẻ");
+      }
     </script>
-</body>
+  </body>
 </html>
