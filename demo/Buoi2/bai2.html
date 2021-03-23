@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2</title>
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h3>
+          Hiện thị số ngẫu nhiên trong khoảng
+          <b id="_min"></b> - <b id="_max"></b>
+        </h3>
+      </div>
+      <div class="content">
+        <p>
+          Số ngẫu nhiên là:
+          <b id="random"></b>
+        </p>
+      </div>
+    </div>
+    <script>
+      var _min = prompt("Nhập vào số min");
+      var _max = prompt("Nhập vào số max");
+      function randomIntFromInterval(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      document.getElementById("random").innerHTML = randomIntFromInterval(
+        parseInt(_min),
+        parseInt(_max)
+      );
+      document.getElementById("_min").innerHTML = _min;
+      document.getElementById("_max").innerHTML = _max;
+    </script>
+  </body>
+</html>

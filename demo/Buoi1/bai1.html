@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        position: relative;
+        min-height: 100vh;
+      }
+      .container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 20em;
+      }
+      h3 {
+        background-color: #d40757;
+        color: #fff;
+        text-align: center;
+        font-size: 25px;
+        padding: 20px 10px;
+      }
+      .content {
+        padding: 10px;
+        border: 2px solid #d40757;
+        border-top: unset;
+      }
+      .content p:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      .content p span {
+        font-size: 18px;
+      }
+      .content p b {
+        font-weight: bold;
+      }
+    </style>
+    <script src="./moi.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h3>Thông Tin Cá Nhân</h3>
+      </div>
+      <div class="content">
+        <p>
+          <span> Họ và Tên:</span>
+          <b>
+            <script>
+              document.write(ht);
+            </script>
+          </b>
+        </p>
+        <p>
+          <span> MSSV:</span>
+          <b>
+            <script>
+              document.write(MSSV);
+            </script>
+          </b>
+        </p>
+        <p>
+          <span> Ngày sinh:</span>
+          <b id="ngaysinh"></b>
+        </p>
+      </div>
+    </div>
+    <script>
+      document.getElementById("ngaysinh").innerHTML = ns;
+    </script>
+  </body>
+</html>
