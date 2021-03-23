@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+}
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  min-width: 350px;
+}
+h3 {
+  background-color: #d40757;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  padding: 20px 10px;
+}
+.content {
+  padding: 10px;
+  border: 2px solid #d40757;
+  border-top: unset;
+}
+.content p:not(:last-child) {
+  margin-bottom: 10px;
+}
+.content p {
+  font-size: 18px;
+}
+.content p b {
+  font-weight: bold;
+}

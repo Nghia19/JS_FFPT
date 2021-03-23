@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bài 2</title>
-</head>
-<body>
-    <pre>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h3>Bài 2</h3>
+      </div>
+      <div class="content">
+        <p id="canbac2"></p>
+        <p id="binhphuong"></p>
+        <p id="lamtron"></p>
+      </div>
+    </div>
     <script type="text/javascript">
-        let x = prompt('Hãy nhập giá trị x')
-        if (isNaN(x)) {
-            alert('Yêu cầu nhập giá trị số cho x')
-        } else {
-            let a = Math.sqrt(x)
-            document.writeln('Căn bậc hai của x là: ' + a)
-            let b = Math.pow(x, 2)
-            document.writeln('Bình phương của x là: ' + b)
-            let c = Math.round(x)
-            document.writeln('Giá trị làm tròn của x là: ' + c)
-        }
+      let x = prompt("Hãy nhập giá trị x");
+      if (isNaN(x)) {
+        alert("Yêu cầu nhập giá trị số cho x");
+      } else {
+        let a = Math.sqrt(x);
+        document.getElementById("canbac2").innerHTML =
+          "Căn bậc hai của <b>" + x + "</b> là: <b>" + a + "</b>";
+        let b = Math.pow(x, 2);
+        document.getElementById("binhphuong").innerHTML =
+          "Bình phương của <b>" + x + "</b> là: <b>" + b + "</b>";
+        let c = Math.round(x);
+        document.getElementById("lamtron").innerHTML =
+          "Giá trị làm tròn của <b>" + x + "</b> là: <b>" + c + "</b>";
+      }
     </script>
-    </pre>
-</body>
+  </body>
 </html>
