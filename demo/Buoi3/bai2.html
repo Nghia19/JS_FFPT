@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h3>SessionStorage và LocalStorage</h3>
+      </div>
+      <div class="content">
+        <h4>SessionStorage</h4>
+        <p style="font-size: 24px">
+          Bạn đã xem trang nay
+          <b id="slxS" style="color: red"></b> lần
+        </p>
+        <h4>LocalStorage</h4>
+        <p style="font-size: 24px">
+          Bạn đã xem trang nay
+          <b id="slxL" style="color: red"></b> lần
+        </p>
+        <p style="font-size: 24px; color: red">
+          Bấm F5 để nạp lại trang và xem kết quả
+        </p>
+      </div>
+    </div>
+    <script>
+      var slxS = sessionStorage.getItem("soLuotXemS");
+      if (slxS == null) slxS = 0;
+      slxS++;
+      sessionStorage.setItem("soLuotXemS", slxS);
+      document.getElementById("slxS").innerHTML = slxS;
+      var slxL = localStorage.getItem("soLuotXemL");
+      if (slxL == null) slxS = 0;
+      slxL++;
+      localStorage.setItem("soLuotXemL", slxL);
+      document.getElementById("slxL").innerHTML = slxL;
+    </script>
+  </body>
+</html>

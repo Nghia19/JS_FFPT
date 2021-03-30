@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        padding: 30px;
+        background-color: aqua;
+        border: 1px solid crimson;
+        height: 500px;
+      }
+      img {
+        height: 300px;
+      }
+    </style>
+    <script>
+      function henu() {
+        // alert("henu");
+        var anh =
+          "<img src='https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/148685981_1578063659250235_1261154934799776025_o.jpg?_nc_cat=103&ccb=1-3&_nc_sid=174925&_nc_ohc=Xw-3XqB5WKwAX9odh6B&_nc_ht=scontent.fsgn2-2.fna&oh=d9ec96f10f6c8e9625b20009ff2d2266&oe=6083EE26'>";
+        document.getElementById("hinh").innerHTML = anh;
+        //  document.write(anh);
+      }
+      function hoano() {
+        // alert("hoano");
+        var anh =
+          "<img src='https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/162716630_1610526316003969_6768803900161357245_o.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=uF2SATBljf8AX85WCqJ&_nc_ht=scontent.fsgn2-2.fna&oh=1ec6bb635b5519c287f9fa4d50c97ee4&oe=608422F5'>";
+        document.getElementById("hinh").innerHTML = anh;
+      }
+      function hoa(x) {
+        var anh;
+        if (x == "henu") {
+          anh =
+            "<img src='https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/162716630_1610526316003969_6768803900161357245_o.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=uF2SATBljf8AX85WCqJ&_nc_ht=scontent.fsgn2-2.fna&oh=1ec6bb635b5519c287f9fa4d50c97ee4&oe=608422F5'>";
+        } else {
+          anh =
+            "<img src='https://scontent.fsgn2-2.fna.fbcdn.net/v/t1.0-9/148685981_1578063659250235_1261154934799776025_o.jpg?_nc_cat=103&ccb=1-3&_nc_sid=174925&_nc_ohc=Xw-3XqB5WKwAX9odh6B&_nc_ht=scontent.fsgn2-2.fna&oh=d9ec96f10f6c8e9625b20009ff2d2266&oe=6083EE26'>";
+        }
+        document.getElementById("hinh").innerHTML = anh;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container">
+      <p id="hinh">vj trí hình</p>
+    </div>
+    <!--
+    <button onclick="henu()">hé nụ</button>
+    <button onclick="hoano()">hoa nở</button>
+    -->
+    <button onclick="hoa('henu')">hé nụ</button>
+    <button onclick="hoa('hoano')">hoa nở</button>
+  </body>
+</html>

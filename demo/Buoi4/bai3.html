@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      .number,
+      .result {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        margin-left: -10px;
+      }
+      .number button,
+      .result span {
+        width: calc(25% - 10px);
+        margin-left: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        text-align: center;
+        min-height: 50px;
+        color: #fff;
+        font-size: 20px;
+      }
+      .number button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background-color: rgb(255 153 0 / 90%);
+        color: #fff;
+        font-size: 20px;
+      }
+      .number button:hover {
+        background-color: #ff9800;
+      }
+      .result span {
+        background-color: #03a9f4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h3>Calculator</h3>
+      </div>
+      <div class="content">
+        <div id="calculator">
+          <div class="number">
+            <button onclick="phepToan('+')">+</button>
+            <button onclick="ganSo(9)">9</button>
+            <button onclick="ganSo(8)">8</button>
+            <button onclick="ganSo(7)">7</button>
+            <button onclick="phepToan('-')">-</button>
+            <button onclick="ganSo(6)">6</button>
+            <button onclick="ganSo(5)">5</button>
+            <button onclick="ganSo(4)">4</button>
+            <button onclick="phepToan('*')">*</button>
+            <button onclick="ganSo(3)">3</button>
+            <button onclick="ganSo(2)">2</button>
+            <button onclick="ganSo(1)">1</button>
+            <button onclick="phepToan('/')">:</button>
+            <button onclick="thucHien()">=</button>
+            <button onclick="thucHienLai()">C</button>
+            <button onclick="ganSo(0)">0</button>
+          </div>
+          <div class="result">
+            <span id="ketqua"></span>
+            <span id="so2"></span>
+            <span id="pheptinh"></span>
+            <span id="so1"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var so1, so2, phepTinh;
+      function ganSo(so) {
+        if (so1 == null) {
+          so1 = so;
+          document.getElementById("so1").innerHTML = so;
+        } else {
+          so2 = so;
+          document.getElementById("so2").innerHTML = so;
+          console.log(so2);
+        }
+      }
+      function phepToan(dau) {
+        phepTinh = dau;
+        document.getElementById("pheptinh").innerHTML = dau;
+      }
+      function thucHien() {
+        if (so1 == null || so2 == null || phepTinh == null) {
+          alert("Nhập đầy đủ giá trị");
+        } else {
+          var ketQua;
+          switch (phepTinh) {
+            case "+": {
+              ketQua = so1 + so2;
+              break;
+            }
+            case "-": {
+              ketQua = so1 - so2;
+              break;
+            }
+            case "*": {
+              ketQua = so1 * so2;
+              break;
+            }
+            case "/": {
+              ketQua = so1 / so2;
+              break;
+            }
+          }
+          document.getElementById("ketqua").innerHTML = ketQua;
+        }
+      }
+      function thucHienLai() {
+        so1 = null;
+        so2 = null;
+        phepTinh = null;
+        document.getElementById("so1").innerHTML = "";
+        document.getElementById("pheptinh").innerHTML = "";
+        document.getElementById("so2").innerHTML = "";
+        document.getElementById("ketqua").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chào theo buổi</title>
+    <style>
+      .container {
+        width: 1200px;
+        border: 1px solid crimson;
+        margin: auto;
+        height: 600px;
+      }
+      header {
+        height: 120px;
+        background-color: darkkhaki;
+        position: relative;
+      }
+      main {
+        height: 400px;
+        background-color: darkorange;
+        position: relative;
+      }
+      footer {
+        height: 200px;
+        background-color: rgb(37, 14, 6);
+        position: relative;
+      }
+      #chao {
+        position: absolute;
+        left: 20px;
+        bottom: 50px;
+        font-size: 34pt;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header></header>
+      <main>
+        <p id="chao"></p>
+      </main>
+      <footer></footer>
+    </div>
+    <script>
+      //khai bao bien
+      var d = new Date();
+      var gio = d.getHours;
+      var chao = document.getElementById("chao");
+      if (gio < 12) {
+        chao.innerHTML = "Chào buổi sáng !";
+      } else {
+        chao.innerHTML = "Chào buổi chiều !";
+      }
+    </script>
+  </body>
+</html>
