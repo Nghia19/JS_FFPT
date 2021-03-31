@@ -5,59 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bài 3</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <style>
-      p {
-        font-size: 30px;
-      }
-      bottom {
-        cursor: pointer;
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-        color: #fff;
-        font-size: 20px;
-        width: 30%;
-        padding: 10px;
-        background: linear-gradient(
-          to bottom,
-          rgba(252, 156, 23, 1) 0%,
-          rgba(247, 126, 27, 1) 100%
-        );
-      }
-    </style>
   </head>
   <body>
-    <div class="container">
-      <div class="title">
-        <h3>Số bí mật</h3>
-      </div>
-      <div class="content">
-        <p id="ket-qua"></p>
-        <bottom onclick=" SoBiMat()">Tiếp tục</bottom>
-      </div>
-    </div>
     <script>
-      SoBiMat();
-      function SoBiMat() {
+      do {
         var so_doan;
-        var ketQua = document.getElementById("ket-qua");
         do {
           so_doan = prompt("Nhập vào số dự đoán");
           if (isNaN(so_doan) == true || so_doan == "") {
             alert("Đây không phải là số , mời bạn nhập lại ");
           }
         } while (isNaN(so_doan) == true || so_doan == "");
-        var so_bi_mat = Math.round(Math.random() * 100);
+        so_bi_mat = Math.round(Math.random() * 10);
         if (so_doan == so_bi_mat) {
-          ketQua.innerHTML = "Đã đoán trúng";
+          alert("Đã đoán trúng");
+          break;
         } else if (so_doan > so_bi_mat) {
-          ketQua.innerHTML = "Số bí mật nhỏ hơn số của bạn";
+          alert("Số bí mật nhỏ hơn số của bạn");
         } else {
-          ketQua.innerHTML = "Số bí mật lớn hơn số của bạn";
+          alert("Số bí mật lớn hơn số của bạn");
         }
-        return;
-      }
+      } while (true);
     </script>
   </body>
 </html>
