@@ -2296,3 +2296,12 @@ select.filter-by-price {
     transform: translateY(-50%);
   }
 }
+#registration-form input {
+  margin-bottom: 0;
+}
+#registration-form .form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label:first-child {
+  display: block;
+}
