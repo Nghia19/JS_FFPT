@@ -2278,7 +2278,10 @@ a.active:after {
   transition: all 0.2s ease-in-out;
 }
 /* kkkk */
-select.filter-by-price {
+.filter-by-price {
+  text-align: center;
+}
+.filter-by-price select {
   width: 100%;
   max-width: max-content;
 }
