@@ -2308,3 +2308,16 @@ a.active:after {
 .form-group label:first-child {
   display: block;
 }
+.rc {
+  border: 1px solid var(--border);
+  padding: 0 0.75em;
+  margin-bottom: 1.5rem;
+  height: 2.8em;
+  font-size: 1.6rem;
+  line-height: 2.8;
+  border-radius: 8px;
+  max-width: 100%;
+  width: 100%;
+  background-color: #fff;
+  color: #808080;
+}
