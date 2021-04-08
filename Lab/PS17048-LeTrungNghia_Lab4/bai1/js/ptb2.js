@@ -1,10 +1,34 @@
 var ptb2 = {
-  a: prompt("Hãy nhập giá trị a:"),
-  b: prompt("Hãy nhập giá trị b:"),
-  c: prompt("Hãy nhập giá trị c:"),
-  giai: function () {
+  a: null,
+  b: null,
+  c: null,
+  nhap: function () {
+    do {
+      this.a = prompt("Hãy nhập giá trị a:");
+      if (isNaN(this.a) == true || this.a == "") {
+        alert("Đây không phải là số , mời bạn nhập lại ");
+      }
+    } while (isNaN(this.a) == true || this.a == "");
+
+    do {
+      this.b = prompt("Hãy nhập giá trị b:");
+      if (isNaN(this.b) == true || this.b == "") {
+        alert("Đây không phải là số , mời bạn nhập lại ");
+      }
+    } while (isNaN(this.b) == true || this.b == "");
+    do {
+      this.c = prompt("Hãy nhập giá trị c:");
+      if (isNaN(this.c) == true || this.c == "") {
+        alert("Đây không phải là số , mời bạn nhập lại ");
+      }
+    } while (isNaN(this.c) == true || this.c == "");
+    this.xuat();
+  },
+  xuat: function () {
     document.getElementById("phuongtrinh").innerHTML =
       this.a + "x<sup>2</sup> + " + this.b + "x = " + this.c;
+  },
+  giai: function () {
     if (this.a == 0) {
       // PT bac 1
       if (this.b == 0 && this.c != 0) {
@@ -37,4 +61,4 @@ var ptb2 = {
     }
   },
 };
-ptb2.giai();
+ptb2.nhap();

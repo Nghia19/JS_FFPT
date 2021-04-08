@@ -35,3 +35,7 @@ h3 {
 .content p b {
   font-weight: bold;
 }
+#clock {
+  text-align: center;
+  font-size: 30px;
+}
