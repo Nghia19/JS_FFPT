@@ -15,18 +15,14 @@ function setUnitPrice() {
   }
 }
 setUnitPrice();
-function toggle(source) {
-  checkboxes = document.getElementsByName("product");
-  for (let i = 0; i < checkboxes.length; i++) {
-    checkboxes[i].checked = source.checked;
-  }
-}
+
 let cart = [];
-function Item(name, imgSrc, price, count) {
+function Item(checkBox, name, imgSrc, price, count) {
+  this.checkBox = checkBox;
   this.name = name;
+  this.imgSrc = imgSrc;
   this.price = price;
   this.count = count;
-  this.imgSrc = imgSrc;
 }
 let addCart = document.getElementsByClassName("add-the-cart");
 for (let index = 0; index < addCart.length; index++) {
@@ -37,6 +33,7 @@ for (let index = 0; index < addCart.length; index++) {
     let price = cc.getElementsByClassName("price");
     let imgSrc = cc.getElementsByTagName("img");
     addItemToCart(
+      true,
       name[0].innerText,
       imgSrc[0].src,
       price[0].getAttribute("data-price"),
@@ -47,19 +44,18 @@ for (let index = 0; index < addCart.length; index++) {
 }
 
 // Add to cart
-function addItemToCart(name, imgSrc, price, count) {
+function addItemToCart(checkBox, name, imgSrc, price, count) {
   for (let item in cart) {
     if (cart[item].name === name) {
       cart[item].count++;
       return;
     }
   }
-  var item = new Item(name, imgSrc, price, count);
+  var item = new Item(checkBox, name, imgSrc, price, count);
   cart.push(item);
 }
 function displayCart() {
   const CARTDETAILS = document.getElementsByClassName("cart-details");
-  console.log(CARTDETAILS);
   if (cart.length > 0) {
     CARTDETAILS[0].style.display = "flex";
   } else {
@@ -67,10 +63,10 @@ function displayCart() {
   }
   let output = "";
   for (let i in cart) {
-    let total = String(cart[i].price * cart[i].count);
+    let checkBox = cart[i].checkBox == true ? "checked" : "";
     output += `<tr class="cart-item">
     <td class="product-checkbox">
-      <input type="checkbox" name="product" id="product-1" />
+      <input type="checkbox" name="product" id="product-1" ${checkBox} onclick="checkBox(this)"/>
     </td>
     <td class="product-thumbnail">
       <img width="90" height="90" src="${cart[i].imgSrc}" />
@@ -95,7 +91,7 @@ function displayCart() {
       </div>
     </td>
     <td class="product-subtotal" data-title="Thành tiền">
-      <span class="priceccc">${formatCash(
+      <span>${formatCash(
         String(cart[i].price * cart[i].count)
       )} <span class="currencySymbol">VNĐ</span></span>
     </td>
@@ -107,7 +103,40 @@ function displayCart() {
   </tr>`;
   }
   document.getElementById("show-cart").innerHTML = output;
-  document.querySelector(".total").innerHTML = sums();
+  document.querySelector(".subtotal").innerHTML = subTotal();
+  document.querySelector(".total").innerHTML = subTotal();
+}
+function toggle(source) {
+  let checkboxes = document.getElementsByName("product");
+  for (let i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = source.checked;
+    cart[i].checkBox = source.checked;
+  }
+  document.querySelector(".subtotal").innerHTML = subTotal();
+  document.querySelector(".total").innerHTML = subTotal();
+}
+function setCheckBoxForItem(name, checkBox) {
+  for (let i in cart) {
+    if (cart[i].name === name) {
+      cart[i].checkBox = checkBox;
+      break;
+    }
+  }
+}
+function checkBox(e) {
+  var name = e.closest("tr").getElementsByClassName("product-name");
+  setCheckBoxForItem(name[0].innerText, e.checked);
+  document.querySelector(".subtotal").innerHTML = subTotal();
+  document.querySelector(".total").innerHTML = subTotal();
+  let checkboxes = document.getElementsByName("product-all");
+  for (let i in cart) {
+    if (cart[i].checkBox == false) {
+      checkboxes[0].checked = false;
+      break;
+    } else {
+      checkboxes[0].checked = true;
+    }
+  }
 }
 function removeItemFromCartAll(name) {
   for (var item in cart) {
@@ -116,6 +145,7 @@ function removeItemFromCartAll(name) {
       break;
     }
   }
+  displayCart();
 }
 function ccc(e) {
   var name = e.closest("tr").getElementsByClassName("product-name");
@@ -131,10 +161,10 @@ function setCountForItem(name, count) {
   }
   displayCart();
 }
-function sums() {
+function subTotal() {
   let sum = 0;
   for (let i in cart) {
-    sum += cart[i].count * cart[i].price;
+    if (cart[i].checkBox == true) sum += cart[i].count * cart[i].price;
   }
   return formatCash(String(sum));
 }

@@ -817,6 +817,7 @@ span.price {
 #services .service {
   transform: translateY(2.5rem);
 }
+
 #services .box-image {
   position: relative;
   display: flex;
@@ -1886,7 +1887,7 @@ table.cart td.actions input {
 table span.price {
   color: rgb(22, 22, 22);
 }
-.cart-totals .order-total span.price {
+.cart-totals .order-total span {
   font-size: 2rem;
   color: red;
 }
