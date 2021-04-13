@@ -1774,7 +1774,8 @@ table.cart td.product-remove {
   padding-right: 0.5rem;
 }
 
-table.cart td.product-remove a.remove {
+table.cart td.product-remove .remove {
+  cursor: pointer;
   position: relative;
   top: auto;
   right: auto;
