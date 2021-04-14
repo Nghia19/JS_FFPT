@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      #result {
+        font-size: 40px;
+        padding: 10px 0;
+        text-align: right;
+        background-color: #ececec;
+        margin-bottom: 10px;
+      }
+      .number {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        margin-left: -10px;
+      }
+      .number button {
+        width: calc(25% - 10px);
+        margin-left: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        text-align: center;
+        min-height: 50px;
+        color: #fff;
+        font-size: 20px;
+      }
+      .number button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background-color: rgb(60 58 55 / 90%);
+        color: #fff;
+        font-size: 20px;
+      }
+      .number button:hover {
+        background-color: rgb(60 58 55 / 100%);
+      }
+      .operator-keys {
+        background: linear-gradient(
+          to bottom,
+          rgba(252, 156, 23, 1) 0%,
+          rgba(247, 126, 27, 1) 100%
+        );
+      }
+      .perform {
+        background: linear-gradient(
+          to bottom,
+          #0083b0,
+          #00b4db
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      .c {
+        background: linear-gradient(to bottom, #ed213a, #93291e);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h3>Calculator</h3>
+      </div>
+      <div class="content">
+        <div id="calculator">
+          <div id="result">0</div>
+          <div class="number">
+            <button class="operator-keys" onclick="ganSo('+')">+</button>
+            <button onclick="ganSo(9)">9</button>
+            <button onclick="ganSo(8)">8</button>
+            <button onclick="ganSo(7)">7</button>
+            <button class="operator-keys" onclick="ganSo('-')">-</button>
+            <button onclick="ganSo(6)">6</button>
+            <button onclick="ganSo(5)">5</button>
+            <button onclick="ganSo(4)">4</button>
+            <button class="operator-keys" onclick="ganSo('*')">*</button>
+            <button onclick="ganSo(3)">3</button>
+            <button onclick="ganSo(2)">2</button>
+            <button onclick="ganSo(1)">1</button>
+            <button class="operator-keys" onclick="ganSo('/')">:</button>
+            <button class="perform" onclick="calculate()">=</button>
+            <button class="c" onclick="clearScreen()">C</button>
+            <button onclick="ganSo(0)">0</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var result = document.getElementById("result");
+      function ganSo(so) {
+        if (
+          result.innerHTML == 0 ||
+          result.innerHTML == "Error" ||
+          result.innerHTML == "undefined"
+        ) {
+          result.innerHTML = so;
+        } else {
+          result.innerHTML += so;
+        }
+      }
+      function clearScreen() {
+        result.innerHTML = 0;
+      }
+      function calculate() {
+        try {
+          var input = eval(result.innerHTML);
+          console.log(input);
+          result.innerHTML = input;
+        } catch (err) {
+          result.innerHTML = "Error";
+        }
+      }
+    </script>
+  </body>
+</html>

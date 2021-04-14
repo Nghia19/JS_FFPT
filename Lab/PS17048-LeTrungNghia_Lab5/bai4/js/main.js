@@ -17,8 +17,8 @@ function handleCellPlayed(clickedCell, clickedCellIndex) {
 }
 
 function handlePlayerChange() {
-  currentPlayer = currentPlayer === "X" ? "O" : "X";
-  colorPlayer = colorPlayer === "#5D9CEC" ? "#ED5565" : "#5D9CEC";
+  currentPlayer = currentPlayer == "X" ? "O" : "X";
+  colorPlayer = colorPlayer == "#5D9CEC" ? "#ED5565" : "#5D9CEC";
   statusDisplay.innerHTML = currentPlayerTurn();
 }
 

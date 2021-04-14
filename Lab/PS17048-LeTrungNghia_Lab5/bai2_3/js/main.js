@@ -55,14 +55,15 @@ function addItemToCart(checkBox, name, imgSrc, price, count) {
   cart.push(item);
 }
 function displayCart() {
-  console.log("sss");
   if (cart.length > 0) {
     CARTDETAILS[0].style.display = "flex";
   }
   let output = "";
   for (let i in cart) {
+    let sum = cart[i].price * cart[i].count;
+    let classActive = sum > 1000000 ? "active" : "";
     let checkBox = cart[i].checkBox == true ? "checked" : "";
-    output += `<tr class="cart-item">
+    output += `<tr class="cart-item  ${classActive}">
     <td class="product-checkbox">
       <input type="checkbox" name="product" id="product-1" ${checkBox} onclick="checkBox(this)"/>
     </td>
@@ -77,20 +78,20 @@ function displayCart() {
     </td>
     <td class="product-quantity" data-title="Số lượng">
       <div class="quantity">
-        <button class="minus-btn" type="button" name="button" onclick="xx(this, -1)">
+        <button class="minus-btn" type="button" name="button" onclick="buttonMinusPlus(this, -1)">
           -
         </button>
         <input type="text" name="quantity" value="${
           cart[i].count
-        }"  onchange="my(this)"/>
-        <button class="plus-btn" type="button" name="button" onclick="xx(this, +1)">
+        }"  onchange="changeQuantity(this)"/>
+        <button class="plus-btn" type="button" name="button" onclick="buttonMinusPlus(this, +1)">
           +
         </button>
       </div>
     </td>
     <td class="product-subtotal" data-price="${cart[i].price}">
       <span>${formatCash(
-        String(cart[i].price * cart[i].count)
+        String(sum)
       )}</span><span class="currencySymbol">VNĐ</span>
     </td>
     <td class="product-remove">
@@ -158,10 +159,16 @@ function subTotal() {
     if (cart[i].checkBox == true) sum += cart[i].count * cart[i].price;
   }
   document.querySelector(".subtotal").innerHTML = formatCash(String(sum));
-  document.querySelector(".total").innerHTML = formatCash(String(sum));
+  let total = document.querySelector(".total");
+  total.innerHTML = formatCash(String(sum));
+  if (sum > 5000000) {
+    total.closest("tr").classList.add("active");
+  } else {
+    total.closest("tr").classList.remove("active");
+  }
 }
 
-function my(e) {
+function changeQuantity(e) {
   var name = e.closest("tr").getElementsByClassName("product-name");
   var input = e.closest("tr").querySelector("input[name=quantity]");
   var value = parseInt(input.value);
@@ -174,36 +181,42 @@ function my(e) {
     .closest("tr")
     .querySelector(".product-subtotal")
     .getAttribute("data-price");
-  e
-    .closest("tr")
-    .querySelector(".product-subtotal span").innerHTML = formatCash(
-    String(value * getPrice)
-  );
+  let setPrice = e.closest("tr").querySelector(".product-subtotal span");
+  let sum = value * getPrice;
+  setPrice.innerHTML = formatCash(String(sum));
+  if (sum > 1000000) {
+    e.closest("tr").classList.add("active");
+  } else {
+    e.closest("tr").classList.remove("active");
+  }
   setCountForItem(name[0].innerText, value);
   subTotal();
 }
 
-function xx(e, cc) {
+function buttonMinusPlus(e, number) {
   var name = e.closest("tr").getElementsByClassName("product-name");
   var input = e.closest("div").querySelector("input");
   var value = parseInt(input.value);
-  if (value <= 1 && cc == -1) {
+  if (value <= 1 && number == -1) {
     value = 1;
-  } else if (value >= 100 && cc == +1) {
+  } else if (value >= 100 && number == +1) {
     value = 100;
   } else {
-    value += cc;
+    value += number;
   }
   input.value = value;
   var getPrice = e
     .closest("tr")
     .querySelector(".product-subtotal")
     .getAttribute("data-price");
-  e
-    .closest("tr")
-    .querySelector(".product-subtotal span").innerHTML = formatCash(
-    String(value * getPrice)
-  );
+  let setPrice = e.closest("tr").querySelector(".product-subtotal span");
+  let sum = value * getPrice;
+  setPrice.innerHTML = formatCash(String(sum));
+  if (sum > 1000000) {
+    e.closest("tr").classList.add("active");
+  } else {
+    e.closest("tr").classList.remove("active");
+  }
   setCountForItem(name[0].innerText, value);
   subTotal();
 }
