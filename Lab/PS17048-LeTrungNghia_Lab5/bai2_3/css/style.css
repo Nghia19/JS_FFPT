@@ -647,9 +647,7 @@ span.price {
   display: inline-block;
   width: 3rem;
   height: 3rem;
-  color: rgb(255, 255, 255);
-
-  background-color: rgb(238, 191, 0);
+  color: rgb(238, 191, 0);
   line-height: 3rem;
 }
 .add-the-cart span {
@@ -1757,6 +1755,7 @@ td:last-child {
 table.cart th,
 table.cart td {
   padding: 1rem 1rem 1rem 0;
+  text-align: center;
 }
 table.cart td {
   font-weight: 700;
@@ -1895,6 +1894,7 @@ table span.price {
 .cart-totals .checkout-button {
   display: block;
   text-align: center;
+  width: 100%;
 }
 .cart-totals .coupon button[type="submit"] {
   width: 100%;
@@ -2091,6 +2091,7 @@ form.add-cart {
   align-items: center;
   margin-right: 4rem;
   padding: 1rem 0;
+  justify-content: center;
 }
 .quantity input {
   padding: 0.5em;

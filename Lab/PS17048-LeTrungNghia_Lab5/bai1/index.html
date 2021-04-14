@@ -10,6 +10,60 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+    <style>
+      body {
+        position: relative;
+        min-height: 100vh;
+      }
+      .row {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid var(--primary-color);
+        align-items: center;
+      }
+      .row .col {
+        padding: 20px;
+      }
+      #cart-details {
+        display: none;
+      }
+      #cart-details h4 {
+        text-align: center;
+        color: #fff;
+        background-color: #d40757;
+        margin-bottom: 0;
+      }
+      .content {
+        padding: 10px;
+        border: 2px solid #d40757;
+        border-top: unset;
+      }
+
+      #cart-details p {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+      }
+      .content p:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      #cart-details span {
+        margin-bottom: 0;
+        font-size: 1.8rem;
+        width: 40%;
+      }
+      #product-title {
+        font-size: 2.5rem !important;
+        color: var(--primary-color);
+      }
+      #subtotal,
+      #subtotal ~ .currencySymbol {
+        font-size: 2.2rem !important;
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <div class="row page-wrapper">
@@ -34,7 +88,10 @@
             (<span class="count">5</span> Đánh giá)
           </a>
         </div>
-        <span class="price product-price">60.000 VNĐ</span>
+        <span class="price product-price"
+          ><span class="unit-price"></span>
+          <span class="currencySymbol">VNĐ</span>
+        </span>
         <div class="product-short-description">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vel
@@ -47,19 +104,30 @@
           <div class="swatch">
             <div class="header">KÍCH THƯỚC</div>
             <div data-value="M" class="swatch-element plain m available">
-              <input type="radio" name="option-0" value="M" checked="" />
+              <input
+                id="swatch-0-m"
+                type="radio"
+                name="size"
+                value="50000"
+                checked=""
+              />
               <label for="swatch-0-m"> M </label>
             </div>
             <div data-value="L" class="swatch-element plain l available">
-              <input type="radio" name="option-0" value="L" />
+              <input id="swatch-0-l" type="radio" name="size" value="70000" />
               <label for="swatch-0-l"> L </label>
             </div>
             <div data-value="XL" class="swatch-element plain xl available">
-              <input type="radio" name="option-0" value="XL" />
+              <input id="swatch-0-xl" type="radio" name="size" value="90000" />
               <label for="swatch-0-xl"> XL </label>
             </div>
             <div data-value="XXL" class="swatch-element plain xxl available">
-              <input type="radio" name="option-0" value="XXL" />
+              <input
+                id="swatch-0-xxl"
+                type="radio"
+                name="size"
+                value="100000"
+              />
               <label for="swatch-0-xxl"> XXL </label>
             </div>
           </div>
@@ -79,6 +147,30 @@
             <i class="fas fa-shopping-cart"></i>
             THÊM VÀO GIỎ
           </button>
+        </div>
+        <div id="cart-details">
+          <h4>THÔNG TIN GIỎ HÀNG</h4>
+          <div class="content">
+            <p>
+              <span>Tên sản phẩm:</span><strong id="product-title">NAME</strong>
+            </p>
+            <p><span>kích thước:</span><strong id="size">0</strong></p>
+            <p><span>Số lượng;</span><strong id="quantity">1</strong></p>
+            <p>
+              <span>Giá bán:</span>
+              <strong>
+                <span id="price">0</span>
+                <span class="currencySymbol">VNĐ</span>
+              </strong>
+            </p>
+            <p>
+              <span>Thành tiền:</span>
+              <strong>
+                <span id="subtotal">0</span>
+                <span class="currencySymbol">VNĐ</span>
+              </strong>
+            </p>
+          </div>
         </div>
       </div>
     </div>

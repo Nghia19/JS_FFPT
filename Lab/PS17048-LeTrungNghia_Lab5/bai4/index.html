@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 4</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      #game-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        max-width: 336px;
+      }
+      #game-container div {
+        font-family: "Permanent Marker", cursive;
+        width: calc(33.33% - 10px);
+        height: 100px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        background-color: #ccd1d9;
+        color: #fff;
+        border-radius: 10%;
+        font-size: 50px;
+        line-height: 100px;
+      }
+      .game-status {
+        text-align: center;
+        padding: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h3>Tic Tac Toe</h3>
+      </div>
+      <div class="content">
+        <div id="game-container">
+          <div data-cell-index="0" class="cell"></div>
+          <div data-cell-index="1" class="cell"></div>
+          <div data-cell-index="2" class="cell"></div>
+          <div data-cell-index="3" class="cell"></div>
+          <div data-cell-index="4" class="cell"></div>
+          <div data-cell-index="5" class="cell"></div>
+          <div data-cell-index="6" class="cell"></div>
+          <div data-cell-index="7" class="cell"></div>
+          <div data-cell-index="8" class="cell"></div>
+        </div>
+        <h2 class="game-status"></h2>
+        <div class="btn">
+          <button class="game-restart">Chơi lại</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

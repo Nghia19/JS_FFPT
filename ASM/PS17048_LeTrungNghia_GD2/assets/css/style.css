@@ -536,9 +536,9 @@ ul {
     box-shadow 0.3s ease 0s, -webkit-filter 0.6s ease 0s,
     -webkit-transform 0.6s ease 0s, -webkit-box-shadow 0.3s ease 0s;
 }
-/* #slider {
-  padding: 0;
-} */
+#slider {
+  padding-top: 0;
+}
 #banner .banner {
   height: 25rem;
 }

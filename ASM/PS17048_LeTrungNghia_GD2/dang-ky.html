@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Foodo | Đặt Món & Giao ship tận nơi | 30 phút giao hàng | Đảm bảo chất
-      lượng
+      Đăng ký | Foodo | Đặt Món & Giao ship tận nơi | 30 phút giao hàng | Đảm
+      bảo chất lượng
     </title>
     <meta
       name="title"
-      content="Foodo | Đặt Món & Giao ship tận nơi | 30 phút giao hàng | Đảm bảo chất lượng"
+      content="Đăng ký | Foodo | Đặt Món & Giao ship tận nơi | 30 phút giao hàng | Đảm bảo chất lượng"
     />
     <meta
       name="description"
@@ -29,95 +29,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <style>
-      .item {
-        display: none;
-      }
-
-      #list-dot span {
-        cursor: pointer;
-        height: 3rem;
-        width: 3rem;
-        margin: 0 2px;
-        background-color: #bbb;
-        color: #fff;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
-
-      #list-dot span.active,
-      #list-dot span:hover {
-        background-color: rgb(11, 158, 255);
-      }
-
-      .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-      }
-
-      @-webkit-keyframes fade {
-        from {
-          opacity: 0.4;
-        }
-
-        to {
-          opacity: 1;
-        }
-      }
-
-      @keyframes fade {
-        from {
-          opacity: 0.4;
-        }
-
-        to {
-          opacity: 1;
-        }
-      }
-
-      .slider {
-        position: relative;
-      }
-
-      .slider-nav button.next,
-      .slider-nav button.prev {
-        width: 3.5rem;
-        height: 3.5rem;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 2rem;
-        color: rgb(255, 255, 255);
-        border: 1px solid var(--secondary-color);
-        background-color: var(--secondary-color);
-        text-align: center;
-        outline: none;
-        transition: all 0.2s ease 0s;
-        cursor: pointer;
-        border-radius: 3px;
-      }
-
-      .slider-nav button:hover {
-        border: 1px solid var(--primary-color);
-        background-color: var(--primary-color);
-      }
-
-      .slider-nav button.prev {
-        left: 1.5rem;
-      }
-
-      .slider-nav button.next {
-        right: 1.5rem;
-      }
-
-      .slider-dots {
-        text-align: center;
-        font-size: 2rem;
-      }
-    </style>
   </head>
 
   <body>
@@ -200,31 +111,145 @@
         <div class="flex-row container">
           <div class="flex-col flex-center">
             <ul class="nav header-nav header-bottom-nav">
-              <li><a href="./index.html" class="active">Trang chủ</a></li>
-              <li><a href="./dang-ky.html">Đăng ký</a></li>
+              <li><a href="./album.html">Album</a></li>
+              <li><a href="./dang-ky.html" class="active">Đăng ký</a></li>
               <li><a href="./bang-gia.html">Bảng giá</a></li>
             </ul>
           </div>
         </div>
       </div>
     </header>
-    <section id="slider">
-      <div class="slider">
-        <div id="slide">
-        </div>
+    <div class="breadcrumbs">
+      <div class="container">
+        <h1 class="breadcrumb-heading">Đăng ký</h1>
+        <nav>
+          <a href="./index.html">Trang chủ</a>
+          <span class="divider">/</span>
+          Đăng ký
+        </nav>
+      </div>
+    </div>
+    <div class="row page-wrapper" style="justify-content: center">
+      <div class="col medium-8 small-12 large-6">
+        <form action="" method="get" id="registration-form">
+          <div class="form-group registration-form-mssv">
+            <label for="mssv"
+              >Mã số sinh viên<span class="required">*</span></label
+            >
+            <input
+              class="form-control"
+              id="mssv"
+              name="mssv"
+              type="text"
+              value=""
+              size="30"
+              required="required"
+            />
+          </div>
+          <div class="form-group registration-form-name">
+            <label for="name">Họ và tên <span class="required">*</span></label>
+            <input
+              class="form-control"
+              id="name"
+              name="name"
+              type="text"
+              value=""
+              size="30"
+              required="required"
+            />
+          </div>
+          <div class="form-group registration-form-email">
+            <label for="email">Email <span class="required">*</span></label>
+            <input
+              class="form-control"
+              id="email"
+              name="email"
+              type="email"
+              value=""
+              size="30"
+              required="required"
+            />
+          </div>
+          <div class="form-group registration-form-gioi-tinh">
+            <label for="gioi-tinh"
+              >Giới tính <span class="required">*</span></label
+            >
+            <div class="rc">
+              <input type="radio" id="nam" name="gender" value="nam" required />
+              <label for="nam">Nam</label>
+              <input type="radio" id="nu" name="gender" value="nu" />
+              <label for="nu">Nữ</label>
+              <input type="radio" id="khac" name="gender" value="khac" />
+              <label for="khac">Khác</label>
+            </div>
+          </div>
+          <div class="form-group registration-form-so-thich">
+            <label for="so-thich"
+              >Sở thích <span class="required">*</span></label
+            >
+            <div class="rc">
+              <input
+                type="checkbox"
+                id="doc-sach"
+                name="doc-sach"
+                value="Đọc sách"
+              />
+              <label for="doc-sach">Đọc sách</label>
+              <input
+                type="checkbox"
+                id="du-lich"
+                name="du-lich"
+                value="Du lịch"
+              />
+              <label for="du-lich"> Du lịch</label>
+              <input
+                type="checkbox"
+                id="am-nhac"
+                name="am-nhac"
+                value="Âm nhạc"
+              />
+              <label for="am-nhac">Âm nhạc</label>
+              <input type="checkbox" id="khacst" name="khacst" value="Khác" />
+              <label for="khacst">Khác</label>
+            </div>
+          </div>
+          <div class="form-group registration-form-quoc-tich">
+            <label for="quoc-tich"
+              >Quốc tịch <span class="required">*</span></label
+            >
+            <select name="quoc-tich" id="quoc-tich" required>
+              <option value="">Chọn quốc tịch</option>
+              <option value="VN">Việt Nam</option>
+              <option value="EN">England</option>
+            </select>
+          </div>
+          <div class="form-group registration-form-comment">
+            <label for="reviews"
+              >Nội dung <span class="required">*</span></label
+            >
+            <textarea
+              id="review"
+              name="r"
+              cols="45"
+              rows="8"
+              maxlength="1000"
+              required="required"
+            ></textarea>
+          </div>
 
-          <div class="slider-nav">
-            <button type="button" class="prev">
-              <i class="fa fa-angle-left"></i>
-            </button>
-            <button type="button" class="next">
-              <i class="fa fa-angle-right"></i>
+          <div class="text-center" style="margin-top: 1rem">
+            <button
+              type="submit"
+              form="registration-form"
+              value="Submit"
+              class="button primary"
+            >
+              ĐĂNG KÝ
             </button>
           </div>
-          <div style="text-align: center" id="nav-button"><div id="list-dot"></div></div>
-        </div>
+        </form>
       </div>
-    </section>
+    </div>
     <section id="news-letter">
       <div class="row row-collapse" style="align-items: center">
         <div class="col medium-12 small-12 large-6 hide-for-medium">
@@ -292,10 +317,12 @@
           <div class="col-inner">
             <h5 class="text-center">Liên kết</h5>
             <ul>
-              <li class="text-center"><a href="#cua-hang.html">Cửa hàng</a></li>
+              <li class="text-center">
+                <a href="#cua-hang.html">Cửa hàng</a>
+              </li>
               <li class="text-center"><a href="#dich-vu.html">Dịch vụ</a></li>
               <li class="text-center">
-                <a href="#chinh-sach.html">Chính sách</a>
+                <a href="./chinh-sach.html">Chính sách</a>
               </li>
               <li class="text-center">
                 <a href="#cau-hoi-thuong-gap.html">Câu hỏi thường gặp</a>
@@ -397,6 +424,5 @@
         </li>
       </ul>
     </div>
-    <script src="./assets/js/index.js"></script>
   </body>
 </html>
