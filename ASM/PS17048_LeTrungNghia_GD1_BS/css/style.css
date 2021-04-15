@@ -108,6 +108,7 @@ div#ketqua {
 button:disabled,
 button[disabled] {
   background-color: #efb110 !important;
+  cursor: not-allowed;
 }
 .thoigian {
   text-align: center;
