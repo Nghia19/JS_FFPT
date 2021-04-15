@@ -4,24 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Giai đoạn 1 bổ sung</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="title">
-        <h3>Tính Toán</h3>
+        <h3>GIẢI PHƯƠNG TRÌNH <br />ax<sup>2</sup> + bx + c = 0</h3>
       </div>
       <div class="content">
-        <p style="font-size: 24px">
-          Kết quả của
-          <b id="so1" style="color: red"></b>
-          <b id="pheptoan" style="color: red"></b>
-          <b id="so2" style="color: red"></b>
-          là
-          <b id="ketqua" style="color: red"></b>
-        </p>
+        <div id="form_id">
+          <p>Số lần giải: <strong id="langiai">0</strong></p>
+          <p>
+            <label for="numbera">Nhập số a:</label>
+            <input type="text" id="numbera" name="numbera" />
+          </p>
+          <p>
+            <label for="numberb">Nhập số b:</label>
+            <input type="text" id="numberb" name="numberb" />
+          </p>
+          <p>
+            <label for="numberc">Nhập số c:</label>
+            <input type="text" id="numberc" name="numberc" />
+          </p>
+        </div>
+        <div id="ketqua">
+          <p id="phuongtrinh"></p>
+          <p id="nghiem"></p>
+        </div>
+        <div class="btn">
+          <button id="giaiPT">GIẢI PT</button>
+          <button onclick="getNumberRandom()">CHO SỐ</button>
+        </div>
+        <div class="thoigian">
+          Bây giờ là
+          <span class="date" id="printTime"></span>
+          <span class="date" id="printDay"></span>
+          <span class="date" id="printDate"></span>
+        </div>
       </div>
     </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
