@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Đăng ký | Foodo | Đặt Món & Giao ship tận nơi | 30 phút giao hàng | Đảm
+      bảo chất lượng
+    </title>
+    <meta
+      name="title"
+      content="Đăng ký | Foodo | Đặt Món & Giao ship tận nơi | 30 phút giao hàng | Đảm bảo chất lượng"
+    />
+    <meta
+      name="description"
+      content="Hamburger bò là đồ ăn nhanh ngon, nhiều chất dinh dưỡng, được rất nhiều người ưa chuộng trên thế giới. Nhiều người thường ăn ở ngoài hàng do e ngại quy trình chế biến phức tạp"
+    />
+    <meta
+      name="keywords"
+      content="Thức ăn nhanh, Món ăn vặt, Đồ ăn vặt, Ăn vặt HCM, Hamburger, Burgers, Cupcake"
+    />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <div id="top-bar" class="header-top">
+        <div class="flex-row container">
+          <div class="flex-col flex-left">
+            <ul class="nav social-icons">
+              <li>
+                <a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#twitter"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#youtube"><i class="fab fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#instagram"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#search"><i class="fas fa-search"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="nav top-bar-nav">
+              <li>
+                <a href="#dang-nhap.html"
+                  ><i class="fas fa-user"></i> Đăng nhập</a
+                >
+              </li>
+              <li>
+                <a href="./dang-ky.html"><i class="fas fa-edit"></i> Đăng ký</a>
+              </li>
+              <li>
+                <a href="#gio-hang.html"
+                  ><i class="fas fa-shopping-cart"></i> 0 items - ($0.00)</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="header-main" class="header-main flex-row container">
+        <div class="flex-col hide-for-medium flex-left">
+          <div class="icon-box featured-box icon-box-left text-left">
+            <div class="icon-box-img">
+              <i class="fas fa-phone-alt" style="font-size: 32px"></i>
+            </div>
+            <div class="icon-box-text">
+              <h4>Hotline (+84) 961174894</h4>
+              <p>E-mail : support@woovn.com</p>
+            </div>
+          </div>
+        </div>
+        <div id="logo" class="flex-col logo">
+          <a href="./index.html"
+            ><img src="./assets/img/logo.png" alt="logo"
+          /></a>
+        </div>
+        <div class="flex-col hide-for-medium flex-right">
+          <div class="icon-box featured-box icon-box-left text-left">
+            <div class="icon-box-img">
+              <i class="fas fa-clock" style="font-size: 32px"></i>
+            </div>
+            <div class="icon-box-text">
+              <h4>Thời gian làm việc:</h4>
+              <p>06:00 - 22:00 hàng ngày</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-col show-for-medium flex-right">
+          <a href="#" class="menu-mobi">
+            <i class="fas fa-bars" style="font-size: 4rem"></i>
+          </a>
+        </div>
+      </div>
+      <div id="header-bottom" class="header-bottom wide-nav flex-has-center">
+        <div class="flex-row container">
+          <div class="flex-col flex-center">
+            <ul class="nav header-nav header-bottom-nav">
+              <li><a href="./album.html">Album</a></li>
+              <li><a href="./dang-ky.html" class="active">Đăng ký</a></li>
+              <li><a href="./bang-gia.html">Bảng giá</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="breadcrumbs">
+      <div class="container">
+        <h1 class="breadcrumb-heading">Đăng ký</h1>
+        <nav>
+          <a href="./index.html">Trang chủ</a>
+          <span class="divider">/</span>
+          Đăng ký
+        </nav>
+      </div>
+    </div>
+    <div class="row page-wrapper" style="justify-content: center">
+      <div class="col medium-8 small-12 large-6">
+        <form id="registration-form">
+          <div class="form-group registration-form-mssv">
+            <label for="mssv"
+              >Mã số sinh viên<span class="required">*</span></label
+            >
+            <input
+              class="form-control"
+              id="mssv"
+              name="mssv"
+              type="text"
+              value=""
+              size="30"
+            />
+          </div>
+          <div class="form-group registration-form-name">
+            <label for="name">Họ và tên <span class="required">*</span></label>
+            <input
+              class="form-control"
+              id="name"
+              name="name"
+              type="text"
+              value=""
+              size="30"
+            />
+          </div>
+
+          <div class="form-group registration-form-gioi-tinh">
+            <label for="gioi-tinh">
+              Ngày sinh <span class="required">*</span>
+            </label>
+            <div class="date-of-birth">
+              <div><label for="day">Ngày</label>
+                <select id="day"></select>
+              </div>
+              <div><label for="month">Tháng</label>
+                <select id="month"></select>
+              </div>
+              <div><label for="year">Năm</label>
+                <select id="year"></select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group registration-form-gioi-tinh">
+            <label for="gioi-tinh"
+              >Giới tính <span class="required">*</span></label
+            >
+            <div class="rc">
+              <input type="radio" id="nam" name="gender" value="nam" />
+              <label for="nam">Nam</label>
+              <input type="radio" id="nu" name="gender" value="nu" />
+              <label for="nu">Nữ</label>
+              <input type="radio" id="khac" name="gender" value="khac" />
+              <label for="khac">Khác</label>
+            </div>
+          </div>
+          <div class="form-group registration-form-email">
+            <label for="email">Email <span class="required">*</span></label>
+            <input
+              class="form-control"
+              id="email"
+              name="email"
+              type="email"
+              value=""
+              size="30"
+            />
+          </div>
+          <div class="form-group registration-form-pass">
+            <label for="email">Mật khẩu <span class="required">*</span></label>
+            <input
+              class="form-control"
+              id="pass"
+              name="pass"
+              type="text"
+              value=""
+              size="30"
+            />
+          </div>
+          <div class="form-group registration-form-confirm_pass">
+            <label for="email">Nhắc lại mật khẩu <span class="required">*</span></label>
+            <input
+              class="form-control"
+              id="confirm_pass"
+              name="confirm_pass"
+              type="password"
+              value=""
+              size="30"
+            />
+          </div>
+          <div class="form-group registration-form-so-thich">
+            <label for="so-thich"
+              >Sở thích <span class="required">*</span></label
+            >
+            <div class="rc">
+              <input
+                type="checkbox"
+                id="doc-sach"
+                name="so_thich"
+                value="Đọc sách"
+              />
+              <label for="doc-sach">Đọc sách</label>
+              <input
+                type="checkbox"
+                id="du-lich"
+                name="so_thich"
+                value="Du lịch"
+              />
+              <label for="du-lich"> Du lịch</label>
+              <input
+                type="checkbox"
+                id="am-nhac"
+                name="so_thich"
+                value="Âm nhạc"
+              />
+              <label for="am-nhac">Âm nhạc</label>
+              <input type="checkbox" id="khacst" name="so_thich" value="Khác" />
+              <label for="khacst">Khác</label>
+            </div>
+          </div>
+          <div class="form-group registration-form-so-thich" id="so_thich_khac" style="display: none">
+            <label for="so-thich">
+              Sở thích khác <span class="required">*</span>
+              <input type="text" name="so_thich" value="" />
+          </div>
+          <div class="form-group registration-form-quoc-tich">
+            <label for="quoc-tich">
+              Quốc tịch <span class="required">*</span>
+            </label>
+            <select name="quoc-tich" id="quoc_tich">
+              <option value="">Chọn quốc tịch</option>
+              <option value="VN">Việt Nam</option>
+              <option value="EN">England</option>
+            </select>
+          </div>
+          <div class="form-group registration-form-comment">
+            <label for="content">
+              Nội dung
+            </label>
+            <textarea
+              id="content"
+              name="r"
+              cols="45"
+              rows="8"
+              maxlength="1000"
+            ></textarea>
+          </div>
+
+          <div class="text-center" style="margin-top: 1rem">
+            <button
+              type="submit"
+              form="registration-form"
+              value="Submit"
+              id="dang_ky"
+              class="button primary"
+            >
+              ĐĂNG KÝ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <section id="news-letter">
+      <div class="row row-collapse" style="align-items: center">
+        <div class="col medium-12 small-12 large-6 hide-for-medium">
+          <div class="col-inner">
+            <img src="./assets/img/banner_newsletter.png" alt="Newsletter" />
+          </div>
+        </div>
+        <div class="col medium-12 small-12 large-6">
+          <div class="col-inner">
+            <form class="form-subscribe">
+              <div class="input-group">
+                <input type="text" placeholder="Your eamil address" />
+                <span class="input-group-btn">
+                  <button class="button secondary" type="submit">
+                    Đăng ký
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="row">
+        <div class="col medium-6 small-12 large-3">
+          <div class="col-inner contact">
+            <h5 class="text-center">Liên hệ</h5>
+            <div class="icon-box featured-box icon-box-left text-left">
+              <div class="icon-box-img">
+                <span class="box-diamond">
+                  <i class="fas fa-phone-alt" style="font-size: 14px"></i
+                ></span>
+              </div>
+              <div class="icon-box-text">
+                <p>Hotline:</p>
+                <p>(+84) 961174894</p>
+              </div>
+            </div>
+            <div class="icon-box featured-box icon-box-left text-left">
+              <div class="icon-box-img">
+                <span class="box-diamond">
+                  <i class="fas fa-envelope" style="font-size: 14px"></i
+                ></span>
+              </div>
+              <div class="icon-box-text">
+                <p>E-mail:</p>
+                <p>support@woovn.com</p>
+              </div>
+            </div>
+            <div class="icon-box featured-box icon-box-left text-left">
+              <div class="icon-box-img">
+                <span class="box-diamond">
+                  <i class="fas fa-clock" style="font-size: 14px"></i
+                ></span>
+              </div>
+              <div class="icon-box-text">
+                <p>Thời gian làm việc:</p>
+                <p>06:00 - 18:00 hàng ngày</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col medium-6 small-12 large-3 hide-for-medium">
+          <div class="col-inner">
+            <h5 class="text-center">Liên kết</h5>
+            <ul>
+              <li class="text-center">
+                <a href="#cua-hang.html">Cửa hàng</a>
+              </li>
+              <li class="text-center"><a href="#dich-vu.html">Dịch vụ</a></li>
+              <li class="text-center">
+                <a href="./chinh-sach.html">Chính sách</a>
+              </li>
+              <li class="text-center">
+                <a href="#cau-hoi-thuong-gap.html">Câu hỏi thường gặp</a>
+              </li>
+              <li class="text-center"><a href="#tin-tuc.html">Tin tức</a></li>
+              <li class="text-center"><a href="#lien-he.html">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col medium-6 small-12 large-3 hide-for-medium">
+          <div class="col-inner">
+            <h5 class="text-center">Follow Us</h5>
+            <ul class="social-icons">
+              <li>
+                <a href="#facebook"
+                  ><i class="fab fa-facebook-f"></i>Facebook</a
+                >
+              </li>
+              <li>
+                <a href="#twitter"><i class="fab fa-twitter"></i>Twitter</a>
+              </li>
+              <li>
+                <a href="#youtube"><i class="fab fa-youtube"></i>Youtube</a>
+              </li>
+              <li>
+                <a href="#instagram"
+                  ><i class="fab fa-instagram"></i>Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col medium-6 small-12 large-3">
+          <div class="col-inner">
+            <h5 class="text-center">MAP</h5>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.281541581405!2d108.11218031526086!3d10.942092459104883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317683143e7bae9d%3A0xaefd8984ce71af22!2zVHLGsOG7nW5nIFRIUFQgQ2h1ecOqbiBUcuG6p24gSMawbmcgxJDhuqFv!5e0!3m2!1svi!2s!4v1611763060560!5m2!1svi!2s"
+              width="100%"
+              height="200"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="absolute-footer">
+        <div class="container text-center">
+          <p>
+            Copyright © 2020 .All rights reserved by <span>Foodo</span>.
+            Designed by <span>Nghia.lt</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <a id="back-to-top" class="fas fa-chevron-up"></a>
+    <div class="support-nav">
+      <ul>
+        <li>
+          <a
+            href="https://www.google.com/maps?ll=10.942087,108.114369&z=15&t=m&hl=vi&gl=US&mapclient=embed&cid=12609385735199502114"
+            rel="nofollow"
+            target="_blank"
+            ><i class="ticon-heart"></i>Tìm đường</a
+          >
+        </li>
+        <li>
+          <a href="https://zalo.me/0961174894" rel="nofollow" target="_blank"
+            ><i class="ticon-zalo-circle2"></i>Chat Zalo</a
+          >
+        </li>
+        <li class="phone-mobile">
+          <a href="tel:0961174894" rel="nofollow" class="button">
+            <span class="phone_animation animation-shadow">
+              <i class="icon-phone-w" aria-hidden="true"></i>
+            </span>
+            <span class="btn_phone_txt">Gọi điện</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.messenger.com/t/nghia.l.t"
+            rel="nofollow"
+            target="_blank"
+            ><i class="ticon-messenger"></i>Messenger</a
+          >
+        </li>
+        <li>
+          <a href="sms:0961174894" class="chat_animation">
+            <i
+              class="ticon-chat-sms"
+              aria-hidden="true"
+              title="Nhắn tin sms"
+            ></i>
+            Nhắn tin SMS</a
+          >
+        </li>
+      </ul>
+    </div>
+    <script src="./assets/js/dang-ky.js"></script>
+  </body>
+</html>

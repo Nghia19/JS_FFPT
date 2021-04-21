@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 3</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h3>ĐẶT HÀNG</h3>
+      </div>
+      <div class="content">
+        <form id="registration-form">
+          <div class="form-group registration-form-san_pham">
+            <label for="san_pham">
+              Tên sản phẩm
+              <span class="required">*</span>
+            </label>
+            <input
+              class="form-control"
+              id="san_pham"
+              name="san_pham"
+              type="text"
+              value=""
+              size="30"
+            />
+          </div>
+          <div class="form-group registration-form-loai">
+            <label for="loai">
+              Loại
+              <span class="required">*</span>
+            </label>
+            <select name="loai" id="loai">
+              <option disabled selected value="">Chọn loại sản phẩm</option>
+              <option value="VN">Việt Nam</option>
+              <option value="EN">England</option>
+            </select>
+          </div>
+          <div class="form-group registration-form-don_gia">
+            <label for="don_gia">
+              Đơn giá
+              <span class="required">*</span>
+            </label>
+            <input
+              class="form-control"
+              id="don_gia"
+              name="don_gia"
+              type="text"
+              value=""
+              size="30"
+            />
+          </div>
+          <div class="form-group registration-form-noi_nhan_hang">
+            <label for="noi_nhan_hang">
+              Nơi nhận hàng
+              <span class="required">*</span>
+            </label>
+            <div class="rc">
+              <input
+                type="radio"
+                id="noi_thanh"
+                name="noi_nhan_hang"
+                value="noi_thanh"
+              />
+              <label for="noi_thanh">Nội thành</label>
+              <input
+                type="radio"
+                id="ngoai_thanh"
+                name="noi_nhan_hang"
+                value="ngoai_thanh"
+              />
+              <label for="ngoai_thanh">Ngoại thành </label>
+            </div>
+          </div>
+          <div
+            class="form-group registration-form-phi_ship"
+            style="display: none"
+          >
+            <label for="phi_ship">
+              Phí vận chuyển
+              <span class="required">*</span>
+            </label>
+            <input
+              class="form-control"
+              id="phi_ship"
+              name="phi_ship"
+              type="text"
+              value="100000"
+              size="30"
+              disabled
+            />
+          </div>
+          <div class="text-center btn" style="margin-top: 1rem">
+            <button
+              type="submit"
+              form="registration-form"
+              value="Submit"
+              class="button primary"
+              id="dang_ky"
+            >
+              ĐĂNG KÝ
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
