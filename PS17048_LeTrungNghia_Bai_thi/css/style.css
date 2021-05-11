@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+}
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  min-width: 500px;
+}
+h3 {
+  background-color: #d40757;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  padding: 20px 10px;
+}
+.content {
+  padding: 10px;
+  border: 2px solid #d40757;
+  border-top: unset;
+}
+.content p:not(:last-child) {
+  margin-bottom: 10px;
+}
+.content p {
+  font-size: 18px;
+}
+.content p b {
+  font-weight: bold;
+}
+#form_id {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#form_id p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#form_id p strong,
+#form_id p input {
+  width: 75%;
+}
+#form_id p strong {
+  color: #d40757;
+}
+input {
+  outline: none;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  padding: 0 0.75em;
+  font-weight: 600;
+  height: 35px;
+  font-size: 16px;
+  line-height: 1.8;
+  border-radius: 8px;
+  vertical-align: middle;
+  background-color: #fff;
+  color: #808080;
+  transition: all 0.3s;
+}
+input:focus {
+  border-color: #eebf00;
+}
+
+div#ketqua {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 50px;
+  border: 2px solid #e5e5e5;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.btn button {
+  cursor: pointer;
+  outline: unset;
+  border: none;
+  background-color: #efb110;
+  color: #fff;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin: 0 5px;
+  font-weight: 600;
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+.btn button:hover {
+  opacity: 1;
+}
+.btn button:first-child {
+  background-color: #148edf;
+}
+.btn button:last-child {
+  background-color: #ab7fde;
+}
+button:disabled,
+button[disabled] {
+  background-color: #efb110 !important;
+  cursor: not-allowed;
+}
+.thoigian {
+  text-align: center;
+  font-size: 20px;
+  color: #009688;
+  font-style: italic;
+}

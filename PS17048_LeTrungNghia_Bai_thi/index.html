@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PS17048 - Lê Trung Nghĩa</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h3>BÉ VUI HỌC TOÁN</h3>
+      </div>
+      <div class="content">
+        <p style="text-align: center">
+          Số lần giải đúng: <strong id="langiaidung">0</strong>
+        </p>
+        <p style="text-align: center">
+          Số lần giải Sai: <strong id="langiaisai">0</strong>
+        </p>
+        <div id="form_id">
+          <p>
+            <label for="x">Nhập số X:</label>
+            <input type="text" id="x" name="numbera" />
+          </p>
+          <p>
+            <label for="y">Nhập số Y:</label>
+            <input type="text" id="y" name="numberb" />
+          </p>
+          <p>
+            <label for="traloi">TRẢ LỜI:</label>
+            <input type="text" id="traloi" name="numberc" />
+          </p>
+          <p>
+            <span>KẾT QUẢ</span>
+            <strong id="ketqua"></strong>
+          </p>
+        </div>
+
+        <div class="btn">
+          <button onclick="taoso()">Tạo số</button>
+          <button id="giai">OK</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

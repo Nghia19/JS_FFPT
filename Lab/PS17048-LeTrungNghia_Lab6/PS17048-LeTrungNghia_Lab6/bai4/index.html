@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài 4</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <style></style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">
+      <h3>Đăng ký</h3>
+    </div>
+    <div class="content">
+      <form id="registration-form">
+        <div class="form-group registration-form-ho">
+          <label for="ho">
+            Họ
+            <span class="required">*</span></label>
+          <input class="form-control" id="ho" name="ho" type="text" value="" size="30" />
+        </div>
+        <div class="form-group registration-form-ten">
+          <label for="ten">Tên <span class="required">*</span></label>
+          <input class="form-control" id="ten" name="ten" type="text" value="" size="30" />
+        </div>
+        <div class="form-group registration-form-gioi-tinh">
+          <label for="gioi-tinh">
+            Ngày sinh <span class="required">*</span>
+          </label>
+          <div class="date-of-birth">
+            <div><label for="day">Ngày</label>
+              <select id="day"></select>
+            </div>
+            <div><label for="month">Tháng</label>
+              <select id="month"></select>
+            </div>
+            <div><label for="year">Năm</label>
+              <select id="year"></select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group registration-form-gioi-tinh">
+          <label for="gioi-tinh">
+            Giới tính <span class="required">*</span>
+          </label>
+          <div class="rc">
+            <input type="radio" id="nam" name="gender" value="nam" />
+            <label for="nam">Nam</label>
+            <input type="radio" id="nu" name="gender" value="nu" />
+            <label for="nu">Nữ</label>
+          </div>
+        </div>
+        <div class="form-group registration-form-phone">
+          <label for="phone">
+            Số điện thoại <span class="required">*</span>
+          </label>
+          <input class="form-control" id="phone" name="phone" type="text" value="" size="30" />
+        </div>
+        <div class="form-group registration-form-so-thich">
+          <label for="so-thich">
+            Sở thích <span class="required">*</span>
+          </label>
+          <div class="rc">
+            <input type="checkbox" id="doc-sach" name="so_thich" value="Đọc sách" />
+            <label for="doc-sach">Đọc sách</label>
+            <input type="checkbox" id="du-lich" name="so_thich" value="Du lịch" />
+            <label for="du-lich"> Du lịch</label>
+            <input type="checkbox" id="am-nhac" name="so_thich" value="Âm nhạc" />
+            <label for="am-nhac">Âm nhạc</label>
+            <input type="checkbox" id="khacst" name="so_thich" value="Khác" />
+            <label for="khacst">Khác</label>
+          </div>
+        </div>
+        <div class="form-group registration-form-so-thich" id="so_thich_khac" style="display: none">
+          <label for="so-thich">
+            Sở thích khác <span class="required">*</span>
+            <input type="text" name="so_thich" value="" />
+        </div>
+        <div class="text-center btn" style="margin-top: 1rem">
+          <button type="submit" form="registration-form" value="Submit" class="button primary" id="dang_ky">
+            ĐĂNG KÝ
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
