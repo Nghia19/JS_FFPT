@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body ng-app="b2">
+    <div class="container" ng-controller="hienthi">
+      <div class="title">
+        <h3>Tinh chu vi diện tích</h3>
+      </div>
+      <div class="content">
+        <form>
+          <!--vùng hiển thì biến-->
+          <p>
+            <label>Chiều dài:</label>
+            <input name="dai" ng-model="dai" class="form-control" />
+          </p>
+          <p>
+            <label>Chiều Rộng:</label>
+            <input name="rong" ng-model="rong" class="form-control" />
+          </p>
+
+          <div class="btn">
+            <button class="btn btn-warning" ng-click="tinhtoan()">
+              Tính toán
+            </button>
+          </div>
+          <p>
+            <label>Chu vi:</label>
+            <span class="form-control">{{chuvi}}</span>
+          </p>
+          <p>
+            <label>Diện tích:</label>
+            <span class="form-control">{{dientich}}</span>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    app = angular.module("b2", []);
+    app.controller("hienthi", xuly);
+    function xuly($scope) {
+      //code xu ly
+      $scope.tinhtoan = function () {
+        var d = parseFloat($scope.dai);
+        var r = parseFloat($scope.rong);
+        $scope.chuvi = (d + r) * 2;
+        $scope.dientich = d * r;
+      };
+    }
+  </script>
+</html>

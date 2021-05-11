@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Bài 3</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h3>Arrays Angular</h3>
+        </div>
+        <div class="content">
+            <div ng-app="" ng-init="names=[
+                            {name:'Gà',lastname: 'Lê Văn '},
+                            {name:'Game',lastname: 'Trần Thị '},
+                            {name:'LOL',lastname: 'Trần thạch '}
+                            ]">
+                <ul>
+                    <li ng-repeat="x in names">{{x.lastname +''+x.name}}</li>
+                </ul>
+            </div>
+        </div>
+</body>
+
+</html>

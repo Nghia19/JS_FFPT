@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Bài1</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h3>THÔNG TIN SẢN PHẨM</h3>
+        </div>
+        <div class="content">
+            <div ng-app="" ng-init="quantity=200; cost=500">
+                <p>Số lượng: {{ quantity}}</p>
+                <p>Giá: {{cost}}</p>
+                <p>Tổng: {{ quantity * cost}} VNĐ</p>
+            </div>
+        </div>
+</body>
+
+</html>

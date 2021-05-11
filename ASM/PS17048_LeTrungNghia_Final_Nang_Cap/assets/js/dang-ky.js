@@ -1,6 +1,11 @@
 let getMSSV = document.getElementById("mssv");
 let getName = document.getElementById("name");
 let getEmail = document.getElementById("email");
+<<<<<<< HEAD
+=======
+let getPass = document.getElementById("pass");
+let getConfirmPass = document.getElementById("confirm_pass");
+>>>>>>> fa02e2fe9fe4ab158e47468df9d75dc1112222d2
 let Days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 let getDay = document.getElementById("day");
 let getMonth = document.getElementById("month");
@@ -11,6 +16,10 @@ let getSoThichKhac = document.getElementById("so_thich_khac");
 let getQuocTich = document.getElementById("quoc_tich");
 let getContent = document.getElementById("content");
 let getDangKy = document.getElementById("dang_ky");
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa02e2fe9fe4ab158e47468df9d75dc1112222d2
 function addStyleError(element) {
   let formGroup = element.closest(".form-group");
   formGroup.classList.add("error");
@@ -70,6 +79,13 @@ function checkEmail() {
   var regx = /^([a-zA-Z0-9\.-]+)@([a-z0-9]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
   return getEmail.value.match(regx) ? true : false;
 }
+<<<<<<< HEAD
+=======
+for (let index = 65; index < 91; index++) {
+  console.log(String.fromCharCode(index));
+  console.log(String.fromCharCode(index).toLowerCase());
+}
+>>>>>>> fa02e2fe9fe4ab158e47468df9d75dc1112222d2
 function checkGender() {
   for (let i = 0; i < getGender.length; i++) {
     if (getGender[i].checked) {
@@ -114,6 +130,26 @@ function checkSoThich() {
     return flag;
   }
 }
+<<<<<<< HEAD
+=======
+
+function checkPass() {
+  var lowerCaseLetters = /[a-z]/g;
+  var upperCaseLetters = /[A-Z]/g;
+  var numbers = /[0-9]/g;
+  let specialChar = /[!@#$%^&*]/g;
+  if (
+    getPass.value.substring(0, 1).match(upperCaseLetters) &&
+    getPass.value.match(lowerCaseLetters) &&
+    getPass.value.match(numbers) &&
+    getPass.value.match(specialChar) &&
+    getPass.value.length >= 8
+  ) {
+    return true;
+  }
+  return false;
+}
+>>>>>>> fa02e2fe9fe4ab158e47468df9d75dc1112222d2
 getDangKy.addEventListener("click", function (e) {
   e.preventDefault();
   let check = true;
@@ -145,9 +181,30 @@ getDangKy.addEventListener("click", function (e) {
     addStyleError(getEmail);
     removeStyleError(getEmail);
     check = false;
+<<<<<<< HEAD
   } else {
     textCorrect += "Email: " + getEmail.value + "\n";
   }
+=======
+  } else if (!checkEmail()) {
+    textCorrect += "Email: " + getEmail.value + "\n";
+  }
+  if (!checkPass()) {
+    textError +=
+      "Mật khẩu phải phải có ký tự đầu là chữ in hoa và bao gồm số, chữ thường, ký tự đặc biệt và phải lớn hơn 8\n";
+    addStyleError(getPass);
+    removeStyleError(getPass);
+    addStyleError(getConfirmPass);
+    removeStyleError(getConfirmPass);
+    check = false;
+  } else if (getConfirmPass.value != getPass.value) {
+    textError += "Mật khẩu không khớp\n";
+    addStyleError(getConfirmPass);
+    removeStyleError(getConfirmPass);
+    check = false;
+  }
+
+>>>>>>> fa02e2fe9fe4ab158e47468df9d75dc1112222d2
   if (getDay.value == "" && getMonth.value == "" && getYear.value == "") {
     textError += "Vui lòng chọn ngày tháng năm sinh!\n";
     if (getDay.value == "") {
